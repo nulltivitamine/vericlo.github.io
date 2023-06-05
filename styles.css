@@ -1,0 +1,67 @@
+body {
+    background-color: white;
+    font-family: 'San Francisco', Arial, sans-serif;
+    color: white;
+    position: relative; /* Hinzugefügt, um den absolut positionierten weißen Kasten zu unterstützen */
+    font-size: 40px;
+}
+
+.top-half {
+    background-image: url('https://www.naturstoff.de/pict/materialgruppen/titel_ln-gewebe.jpg');
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Hinzugefügt, um z-index zu unterstützen */
+}
+
+.bottom-half {
+    background-color: lightgreen;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #05004e;
+}
+
+.icon {
+    font-size: 300px; /* Sie können die Größe des Icons anpassen, indem Sie die Schriftgröße ändern */
+    color: white; /* Sie können die Farbe des Icons ändern, indem Sie die Schriftfarbe ändern */
+    z-index: 1; /* Hinzugefügt, um das Icon in den Vordergrund zu bringen */
+}
+
+.white-box {
+    background-color: white;
+    border-radius: 15px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Hinzugefügt, um den Kasten absolut zu positionieren */
+    top: 50%; /* Hinzugefügt, um den Kasten vertikal zu zentrieren */
+    left: 50%; /* Hinzugefügt, um den Kasten horizontal zu zentrieren */
+    transform: translate(-50%, -50%); /* Hinzugefügt, um den Kasten perfekt zu zentrieren */
+    z-index: 0; /* Hinzugefügt, um sicherzustellen, dass der Kasten hinter dem Icon angezeigt wird */
+}
+
+.white-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33, 0 0 15px #33ff33, 0 0 20px #33ff33; }
+    50% { box-shadow: 0 0 10px #33ff33, 0 0 20px #33ff33, 0 0 30px #33ff33, 0 0 40px #33ff33; }
+    100% { box-shadow: 0 0 5px #33ff33, 0 0 10px #33ff33, 0 0 15px #33ff33, 0 0 20px #33ff33; }
+}
+
+.white-box img {
+    max-width: 100%;
+    max-height: 100%;
+    animation: glowing 2s infinite; /* Hinzugefügt, um die Animation auf das Bild anzuwenden */
+}
+
