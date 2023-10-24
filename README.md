@@ -1,1 +1,0 @@
-# vericlo.github.io
